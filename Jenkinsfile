@@ -3,20 +3,19 @@ pipeline {
   stages {
     stage('Fluffy Build') {
       steps {
-        sh 'echo Another Placeholder'
+        sh './jenkins/build.sh'
       }
     }
 
     stage('Fluff Test') {
       steps {
-        sh '''sleep 5
-echo Success!'''
+        sh './jenkins/test-all.sh'
       }
     }
 
     stage('Fluffy Deploy') {
       steps {
-        echo 'Placeholder'
+        sh './jenkins/deploy.sh staging'
       }
     }
 
