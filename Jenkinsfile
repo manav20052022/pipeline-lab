@@ -26,7 +26,7 @@ pipeline {
 
         stage('Performance') {
           steps {
-            sh './jenkins/test-perfromance.sh'
+            sh './jenkins/test-performance.sh'
           }
         }
 
